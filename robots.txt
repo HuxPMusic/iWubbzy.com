@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iwubbzy.com/sitemap.xml
