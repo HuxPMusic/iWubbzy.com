@@ -1,6 +1,4 @@
-# iWubbzy Fan (Home + Forum only)
-
-Trimmed build with only **Home** and **Forum** pages.
+# iWubbzy.com
 
 - Updated footer wording per owner request (includes Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom)
 - Minimal nav: Home, Forum
@@ -10,7 +8,7 @@ Trimmed build with only **Home** and **Forum** pages.
 ```
 /
   index.html
-  404.html (add if needed)
+  404.html
   /forum/
   /assets/css/style.css
   /assets/js/main.js
