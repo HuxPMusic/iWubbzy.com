@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="140" viewBox="0 0 480 140" role="img" aria-labelledby="t">
-<title id="t">iWubbzy Fan Logo (Placeholder)</title>
-<rect x="0" y="0" width="480" height="140" rx="24" fill="#FFE500" stroke="#111" stroke-width="4"/>
-<text x="50%" y="55%" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="56" font-weight="800" fill="#111">iWubbzy</text>
-<text x="50%" y="85%" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="18" font-weight="600" fill="#333">Fan Site Placeholder</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="140" aria-labelledby="t" role="img" viewBox="0 0 480 140"><title id="t">iWubbzy Fan Logo (Placeholder)</title><rect width="480" height="140" x="0" y="0" fill="#FFE500" stroke="#111" stroke-width="4" rx="24"/><text x="50%" y="55%" fill="#111" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="56" font-weight="800" text-anchor="middle">iWubbzy</text><text x="50%" y="85%" fill="#333" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Fan Site Placeholder</text></svg>
