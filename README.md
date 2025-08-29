@@ -1,27 +1,23 @@
-# iWubbzy.com
+# iWubbzy Fan (Home + Forum only)
 
-A minimal, modern, accessible reboot for **iWubbzy.com** (fan-operated). Most content is intentionally blank for now.
+Trimmed build with only **Home** and **Forum** pages.
 
-- Responsive layout, sensible defaults, dark‑mode support
-- Accessible nav with skip‑link
-- No blog posts
-- Helpers for mapping legacy URLs: see `legacy/`
+- Updated footer wording per owner request (includes Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom)
+- Minimal nav: Home, Forum
+- Legacy URL mapping files generated from uploaded iWubbzy.com archive in `/legacy/`
 
 ## Structure
 ```
 /
   index.html
-  404.html
-  /characters/
-  /episodes/
-  /games/
-  /music/
-  /gallery/
-  /about/
-  /contact/
+  404.html (add if needed)
+  /forum/
   /assets/css/style.css
   /assets/js/main.js
   /assets/img/...
   /legacy/legacy_map.csv
   /legacy/legacy_urls.json
+  site.webmanifest
+  robots.txt
+  sitemap.xml
 ```
