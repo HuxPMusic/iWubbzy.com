@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  // nav highlight
   const here = location.pathname.replace(/\/index\.html$/, "/");
   document.querySelectorAll('nav a').forEach(a => {
     const href = a.getAttribute("href");
@@ -11,29 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const y = document.querySelector("#year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // theme toggle (persist + sync to giscus)
   const key = "theme";
   const btn = document.querySelector("[data-theme-toggle]");
-  function currentPrefersDark(){ return window.matchMedia('(prefers-color-scheme: dark)').matches; }
+  function prefersDark(){ return window.matchMedia('(prefers-color-scheme: dark)').matches; }
   function getTheme(){
-    const saved = localStorage.getItem(key);
-    if (saved === "light" || saved === "dark") return saved;
-    return currentPrefersDark() ? "dark" : "light";
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved === "light" || saved === "dark") return saved;
+    } catch(e){}
+    return prefersDark() ? "dark" : "light";
   }
   function setTheme(next){
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem(key, next);
+    try { localStorage.setItem(key, next); } catch(e){}
     if (btn) {
       btn.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
       const label = btn.querySelector("[data-theme-label]");
       if (label) label.textContent = next === "dark" ? "Dark" : "Light";
     }
-    // giscus theme sync
     const iframe = document.querySelector("iframe.giscus-frame");
     if (iframe) {
-      iframe.contentWindow.postMessage({
-        giscus: { setConfig: { theme: next === "dark" ? "dark" : "light" } }
-      }, "https://giscus.app");
+      iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: next === "dark" ? "dark" : "light" } } }, "https://giscus.app");
     }
   }
   setTheme(getTheme());

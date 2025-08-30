@@ -4,20 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iWubbzy.com</title>
-  <meta name="description" content="A modern fan site for iWubbzy — placeholder build.">
+  <meta name="description" content="iWubbzy.com fan site rebuild.">
   <link rel="canonical" href="https://iwubbzy.com/">
-  <link rel="apple-touch-icon" href="/assets/img/app-icon-192.png">
+  
+  <script>
+  (function(){
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch(e){}
+  })();
+  </script>
+  <style id="skiplink-style">
+    a.skip-link{
+      position:absolute !important;
+      left:-9999px !important;
+      top:auto !important;
+      width:1px !important;
+      height:1px !important;
+      overflow:hidden !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      white-space: nowrap !important;
+    }
+    a.skip-link:focus,
+    a.skip-link:active,
+    a.skip-link:focus-visible{
+      left:1rem !important;
+      top:1rem !important;
+      width:auto !important;
+      height:auto !important;
+      clip:auto !important;
+      white-space: normal !important;
+      padding:.5rem .75rem !important;
+      background: var(--accent-yellow, #ffe500) !important;
+      color:#111 !important;
+      border-radius:.5rem !important;
+      outline:2px solid #111 !important;
+      z-index:1000 !important;
+    }
+  </style>
+
   <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/assets/img/alarm-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/img/alarm-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#FFE500">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="iWubbzy.com Home">
@@ -35,32 +73,42 @@
       </button>
     </div>
   </header>
-  
   <main id="main" class="container main">
     <div class="two-col">
       <section class="content">
-        <article class="card">
-          <h1>Welcome to iWubbzy.com!</h1>
-          <p>This is a fan-operated reboot of the classic site. We’re keeping things simple while we rebuild.</p>
-          <p><strong>Try the Forum</strong> to say hi or leave suggestions.</p>
-        </article>
-        <article class="card">
-          <h2>News (placeholder)</h2>
-          <p>No posts yet — check back soon.</p>
+        <article class="card post">
+          <div class="date-badge"><span class="day">25</span><span class="mon">Apr</span></div>
+          <h1>Wow Wow Wubbzy - The Dance Party Dance!</h1>
+          <p>This is a placeholder article styled like the classic site. Real posts will go here later.</p>
+          <img alt="Placeholder hero" src="/assets/img/logo.png" style="max-width:100%;height:auto" />
+          <p class="muted">Copyright for character art belongs to its rights holders.</p>
         </article>
       </section>
       <aside class="sidebar">
-        <div class="widget"><strong>Search</strong><br><input type="search" placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--ink)"></div>
-        <div class="widget"><strong>Follow</strong><p class="muted">Social boxes will live here later.</p></div>
-        <div class="widget"><strong>Activity of the Day</strong><p class="muted">Placeholder widget.</p></div>
+        <div class="widget">
+          <strong>Search</strong><br>
+          <input type="search" placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--ink)">
+        </div>
+        <div class="widget follow-box">
+          <strong>Follow</strong>
+          <div class="follow-item"><img src="/assets/img/alarm-32.png" alt=""><div><div><strong>IWubbzy</strong></div><div class="muted">Follow Page</div></div></div>
+          <div class="follow-item"><img src="/assets/img/alarm-32.png" alt=""><div><div><strong>IDaisy</strong></div><div class="muted">Follow Page</div></div></div>
+          <div class="follow-item"><img src="/assets/img/alarm-32.png" alt=""><div><div><strong>IWidget</strong></div><div class="muted">Follow Page</div></div></div>
+        </div>
+        <div class="widget">
+          <strong>Wubbzy Says</strong>
+          <ul>
+            <li><a href="/forum/">Visit the forum</a></li>
+            <li><a href="/">Read the latest post</a></li>
+          </ul>
+        </div>
       </aside>
     </div>
   </main>
-
   
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> iWubbzy.com, an unofficial, non‑commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
+      <small>© <span id="year"></span> iWubbzy.com, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
       <br><small>Site owner: <a href="https://huxpmusic.com">HuxP</a></small>
     </div>
   </footer>

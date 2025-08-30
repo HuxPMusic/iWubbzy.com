@@ -3,21 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iWubbzy.com — Forum</title>
-  <meta name="description" content="Forum placeholder for the iWubbzy fan site.">
+  <title>iWubbzy.com - Forum</title>
+  <meta name="description" content="iWubbzy.com fan site rebuild.">
   <link rel="canonical" href="https://iwubbzy.com/forum/">
-  <link rel="apple-touch-icon" href="/assets/img/app-icon-192.png">
+  
+  <script>
+  (function(){
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch(e){}
+  })();
+  </script>
+  <style id="skiplink-style">
+    a.skip-link{
+      position:absolute !important;
+      left:-9999px !important;
+      top:auto !important;
+      width:1px !important;
+      height:1px !important;
+      overflow:hidden !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      white-space: nowrap !important;
+    }
+    a.skip-link:focus,
+    a.skip-link:active,
+    a.skip-link:focus-visible{
+      left:1rem !important;
+      top:1rem !important;
+      width:auto !important;
+      height:auto !important;
+      clip:auto !important;
+      white-space: normal !important;
+      padding:.5rem .75rem !important;
+      background: var(--accent-yellow, #ffe500) !important;
+      color:#111 !important;
+      border-radius:.5rem !important;
+      outline:2px solid #111 !important;
+      z-index:1000 !important;
+    }
+  </style>
+
   <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/assets/img/alarm-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/img/alarm-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#FFE500">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="iWubbzy.com Home">
@@ -35,36 +73,33 @@
       </button>
     </div>
   </header>
-  
   <main id="main" class="container main">
-    
-<section class="card" id="forum">
-  <h1>Forum</h1>
-  <p>Use the discussion thread below to chat. Each page can have its own thread.</p>
-  <script src="https://giscus.app/client.js"
-        data-repo="HuxPMusic/iWubbzy.com"
-        data-repo-id="R_kgDOPmGnnQ"
-        data-category="General"
-        data-category-id="DIC_kwDOPmGnnc4CuwLf"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-  </script>
-  <noscript>Please enable JavaScript to view the forum.</noscript>
-</section>
-
+    <section class="card post">
+      <div class="date-badge"><span class="day">01</span><span class="mon">Sep</span></div>
+      <h1>Forum</h1>
+      <p>Discuss iWubbzy here. This thread is powered by giscus.</p>
+      <script src="https://giscus.app/client.js"
+            data-repo="HuxPMusic/iWubbzy.com"
+            data-repo-id="R_kgDOPmGnnQ"
+            data-category="General"
+            data-category-id="DIC_kwDOPmGnnc4CuwLf"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+      </script>
+      <noscript>Please enable JavaScript to view the forum.</noscript>
+    </section>
   </main>
-
   
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> iWubbzy.com, an unofficial, non‑commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
+      <small>© <span id="year"></span> iWubbzy.com, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
       <br><small>Site owner: <a href="https://huxpmusic.com">HuxP</a></small>
     </div>
   </footer>
