@@ -142,3 +142,10 @@ a:hover { text-decoration: underline }
 .footer small a { color: inherit; text-decoration: underline }
 
 .byline{color:var(--muted);font-size:.9rem;margin:.25rem 0 .5rem}
+
+.btn-ig{
+  display:inline-block; padding:.4rem .65rem; border-radius:.5rem;
+  background:#ef3b6a; color:#fff; text-decoration:none; font-weight:700;
+}
+.btn-ig:hover{ filter:brightness(1.05) }
+.yt-sub{ margin:.25rem 0 }
