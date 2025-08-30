@@ -140,3 +140,5 @@ a:hover { text-decoration: underline }
   padding: 1.5rem 0;
 }
 .footer small a { color: inherit; text-decoration: underline }
+
+.byline{color:var(--muted);font-size:.9rem;margin:.25rem 0 .5rem}
