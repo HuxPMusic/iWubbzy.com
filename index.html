@@ -4,47 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iWubbzy</title>
-  <meta name="description" content="iWubbzy.com fan site rebuild.">
+  <meta name="description" content="iWubbzy fan site.">
   <link rel="canonical" href="https://iwubbzy.com/">
   
   <script>
-  (function(){
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'light' || t === 'dark') {
-        document.documentElement.setAttribute('data-theme', t);
-      }
-    } catch(e){}
-  })();
+  (function(){ try{ var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); } }catch(e){} })();
   </script>
-  <style id="skiplink-style">
-    a.skip-link{
-      position:absolute !important;
-      left:-9999px !important;
-      top:auto !important;
-      width:1px !important;
-      height:1px !important;
-      overflow:hidden !important;
-      clip: rect(1px, 1px, 1px, 1px) !important;
-      white-space: nowrap !important;
-    }
-    a.skip-link:focus,
-    a.skip-link:active,
-    a.skip-link:focus-visible{
-      left:1rem !important;
-      top:1rem !important;
-      width:auto !important;
-      height:auto !important;
-      clip:auto !important;
-      white-space: normal !important;
-      padding:.5rem .75rem !important;
-      background: var(--accent-yellow, #ffe500) !important;
-      color:#111 !important;
-      border-radius:.5rem !important;
-      outline:2px solid #111 !important;
-      z-index:1000 !important;
-    }
-  </style>
 
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -59,7 +24,8 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="iWubbzy Home">
-<div><span class="brand-title">iWubbzy</span><br><small>unofficial site</small></div>
+        <img src="/assets/img/logo.png" alt="iWubbzy wordmark" height="56" />
+        <div><span class="brand-title">iWubbzy</span><br><small>unofficial site</small></div>
       </a>
       <nav class="nav" aria-label="Primary">
         <ul>
@@ -77,70 +43,49 @@
       <section class="content">
         <article class="card post">
           <div class="date-badge"><span class="day">30</span><span class="mon">Aug</span></div>
-          <h1>Welcome to iWubbzy.com!</h1>
-          <p class=\"byline\"><time datetime=\"2025-08-30\">30 August 2025</time></p>
+          <h1>Welcome to iWubbzy!</h1>
+          <p class="byline"><time datetime="2025-08-30">30 August 2025</time></p>
           <p>This is a placeholder article styled like the classic site. Real posts will go here later.</p>
-<p class="muted">Copyright for character art belongs to its rights holders.</p>
+          <p class="muted">Copyright for character art belongs to its rights holders.</p>
         </article>
       </section>
       <aside class="sidebar">
-  <div class="widget">
-    <strong>Search</strong><br>
-    <input type="search" placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--ink)">
-  </div>
-
-  <div class="widget follow-box">
-    <strong>Follow</strong>
-
-    <!-- YouTube Subscribe (replace CHANNEL_ID_HERE with your channel ID if needed) -->
-    <div class="follow-item">
-      <div>
-        <div><strong>YouTube</strong></div>
-          <div class="g-ytsubscribe" data-channelid="UCjgGQNn6dPbnuLTvuRLTu5Q" data-layout="default" data-count="default"></div>
-
-        <div class="yt-sub">
-          
+        <div class="widget">
+          <strong>Search</strong><br>
+          <input type="search" placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--ink)">
         </div>
-      </div>
-    </div>
 
-    <!-- Twitter Follow -->
-    <div class="follow-item">
-      <div>
-        <div><strong>Twitter</strong></div>
-        <a href="https://twitter.com/HuxPMusic?ref_src=twsrc%5Etfw"
-           class="twitter-follow-button"
-           data-size="large"
-           data-show-screen-name="true"
-           data-show-count="false">
-           Follow</a>
-      </div>
-    </div>
+        <div class="widget follow-box">
+          <strong>Follow</strong>
 
-    <!-- Instagram - no official embed, use branded button -->
-    <div class="follow-item">
-      <div>
-        <div><strong>Instagram</strong></div>
-        <a class="btn-ig" href="https://instagram.com/HuxPMusic" target="_blank" rel="me noopener">Follow on Instagram</a>
-      </div>
-    </div>
-  </div>
-      </div>
-    </div><div class="muted"></div>
-      </div>
-    </div><div class="muted"></div>
-      </div>
-    </div>
-  </div>
+          <div class="follow-item">
+            <div>
+              <div><strong>YouTube</strong></div>
+              <div class="g-ytsubscribe" data-channelid="UCjgGQNn6dPbnuLTvuRLTu5Q" data-layout="default" data-count="default"></div>
+            </div>
+          </div>
 
-  <div class="widget">
-    <strong>Wubbzy Says</strong>
-    <ul>
-      <li><a href="/forum/">Visit the forum</a></li>
-      <li><a href="/">Read the latest post</a></li>
-    </ul>
-  </div>
-</aside>
+          <div class="follow-item">
+            <div>
+              <div><strong>Twitter</strong></div>
+              <a href="https://twitter.com/HuxPMusic?ref_src=twsrc%5Etfw"
+                 class="twitter-follow-button"
+                 data-size="large"
+                 data-show-screen-name="true"
+                 data-show-count="false">
+                 Follow @HuxPMusic
+              </a>
+            </div>
+          </div>
+
+          <div class="follow-item">
+            <div>
+              <div><strong>Instagram</strong></div>
+              <a class="btn-ig" href="https://instagram.com/HuxPMusic" target="_blank" rel="me noopener">Follow on Instagram</a>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
   </main>
   
@@ -151,9 +96,8 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
-
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script async src="https://apis.google.com/js/platform.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
