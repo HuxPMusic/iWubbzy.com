@@ -35,3 +35,7 @@ a{color:#0a69e6;text-underline-offset:.2em;text-decoration-thickness:.08em} a:ho
 /* Skip link hidden unless focused */
 a.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 a.skip-link:focus,a.skip-link:focus-visible{left:1rem;top:1rem;width:auto;height:auto;clip:auto;white-space:normal;padding:.5rem .75rem;background:var(--accent-yellow);color:#111;border-radius:.5rem;outline:2px solid #111;z-index:1000}
+
+.notice{padding:.75rem 1rem;border-radius:.6rem;margin:.75rem 0;border:1px solid var(--border);background:var(--paper)}
+.notice-info{border-color:#7bb3ff;background:rgba(123,179,255,.12)}
+.notice strong{font-weight:800}

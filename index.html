@@ -17,6 +17,34 @@
   <link rel="apple-touch-icon" href="/assets/img/alarm-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#FFE500">
+  
+  <style id="skiplink-style">
+    a.skip-link{
+      position:absolute !important;
+      left:-9999px !important;
+      top:auto !important;
+      width:1px !important;
+      height:1px !important;
+      overflow:hidden !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      white-space: nowrap !important;
+    }
+    a.skip-link:focus, a.skip-link:active, a.skip-link:focus-visible{
+      left:1rem !important;
+      top:1rem !important;
+      width:auto !important;
+      height:auto !important;
+      clip:auto !important;
+      white-space: normal !important;
+      padding:.5rem .75rem !important;
+      background: var(--accent-yellow, #ffe500) !important;
+      color:#111 !important;
+      border-radius:.5rem !important;
+      outline:2px solid #111 !important;
+      z-index:1000 !important;
+    }
+  </style>
+
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
