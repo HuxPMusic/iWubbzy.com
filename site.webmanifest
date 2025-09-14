@@ -3,8 +3,8 @@
   "short_name": "iWubbzy",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFE500",
-  "theme_color": "#FFE500",
+  "background_color": "#ffffff",
+  "theme_color": "#ffe500",
   "icons": [
     {
       "src": "/assets/img/app-icon-192.png",
