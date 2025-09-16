@@ -1,7 +1,6 @@
-// S1 player — static-site friendly
-// - Renders list immediately from filenames (fallback), then upgrades with ID3 titles + track numbers
-// - URL-encodes filenames so spaces/commas/apostrophes work on GitHub Pages
-// - Plays sequentially; highlights active track; shows "track#. title" once (no .mp3)
+// S1 player — duplicate-number hotfix
+// This version strips any leading numbers from ID3 title (e.g., "21. Planet Fun")
+// so the list shows exactly: "<trackNumber>. <clean title>"
 
 const AUDIO = document.getElementById('audio');
 const PLAY  = document.getElementById('play');
@@ -51,10 +50,9 @@ function readTags(url) {
   });
 }
 
-// Build list quickly (filenames), then upgrade with tags
+// Build list quickly from filenames, then upgrade with tags
 async function buildList() {
   LIST.innerHTML = '';
-  // initial render
   tracks.forEach((t, i) => {
     const fnTitle = stripLeadingNum(stripExt(t.file));
     t.meta = { title: fnTitle, artist: '', trackNumber: i+1 };
@@ -64,18 +62,18 @@ async function buildList() {
     li.addEventListener('click', () => load(i, true));
     LIST.appendChild(li);
   });
-  // upgrade with tags (sequentially to avoid hammering)
+  // upgrade with ID3
   for (let i = 0; i < tracks.length; i++) {
     const f = tracks[i].file;
     const url = `/downloads/s1-soundtrack/${encodeURIComponent(f)}`;
     const meta = await readTags(url);
-    const title = (meta.title || tracks[i].meta.title);
+    const rawTitle = meta.title || tracks[i].meta.title;
+    const title = stripLeadingNum(stripExt(rawTitle));
     const artist = meta.artist || tracks[i].meta.artist;
     const tn = meta.trackNumber || (i+1);
     tracks[i].meta = { title, artist, trackNumber: tn, _tags: meta._tags };
     const li = LIST.children[i];
     if (li) li.textContent = `${tn}. ${title}`;
-    // set cover from first track that has embedded art
     if (i === 0 && meta._tags) applyCoverFromTags(meta._tags);
   }
 }
@@ -85,10 +83,8 @@ async function load(i, autoplay=false) {
   const t = tracks[i];
   const url = `/downloads/s1-soundtrack/${encodeURIComponent(t.file)}`;
   AUDIO.src = url;
-
   setNowPlaying(t.meta);
   [...LIST.children].forEach((li, idx) => li.classList.toggle('active', idx===i));
-
   if (autoplay) AUDIO.play();
 }
 
