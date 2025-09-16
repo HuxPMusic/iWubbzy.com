@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iWubbzy — Season One (Unofficial Soundtrack)</title>
+  <title>iWubbzy - Season One (Unofficial Soundtrack)</title>
   <meta name="description" content="Stream the Season One (Unofficial) soundtrack.">
+  <!-- Theme boot (sync with site) -->
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();</script>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="./style.css">
@@ -24,6 +26,9 @@
           <li><a href="/archive/">Archive</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+        <span aria-hidden="true">🌓</span> <span data-theme-label>Light</span>
+      </button>
     </div>
   </header>
 
@@ -51,7 +56,7 @@
 
       <ol id="tracklist" class="tracklist"></ol>
 
-      <audio id="audio" preload="metadata"></audio>
+      <audio id="audio" preload="metadata" crossorigin="anonymous"></audio>
     </section>
   </main>
 
@@ -61,6 +66,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/main.js" defer></script>
   <script src="./player.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
-// Playlist player that pulls /downloads/s1-soundtrack/tracks.json
-// and reads ID3 tags (title/artist/track + cover art) using jsmediatags.
+// Playlist player for S1. 
+// - Uses /downloads/s1-soundtrack/tracks.json
+// - Reads ID3 tags for titles/track numbers and album art
+// - URL-encodes filenames so spaces/commas/apostrophes work on GitHub Pages
 
 const AUDIO = document.getElementById('audio');
 const PLAY  = document.getElementById('play');
@@ -14,17 +16,18 @@ let tracks = [];
 let index = 0;
 let seeking = false;
 
+function stripExt(name) {
+  return name.replace(/\.mp3$/i, '');
+}
 function fmtTime(s) {
   const m = Math.floor(s/60);
   const ss = Math.floor(s%60).toString().padStart(2,'0');
   return `${m}:${ss}`;
 }
-
 function setNowPlaying(meta) {
   const { title, artist, trackNumber } = meta;
   NOW.textContent = `${trackNumber ? trackNumber + '. ' : ''}${title}${artist ? ' — ' + artist : ''}`;
 }
-
 function applyCoverFromTags(tags) {
   if (!tags || !tags.picture) return;
   try {
@@ -35,7 +38,6 @@ function applyCoverFromTags(tags) {
     COVER.src = url;
   } catch {}
 }
-
 function readTags(url) {
   return new Promise((resolve) => {
     window.jsmediatags.read(url, {
@@ -54,9 +56,16 @@ function readTags(url) {
 
 async function buildList() {
   LIST.innerHTML = '';
+  // Read ID3 for each file so the list shows proper numbers/titles
   for (let i = 0; i < tracks.length; i++) {
+    const f = tracks[i].file;
+    const url = `/downloads/s1-soundtrack/${encodeURIComponent(f)}`;
+    const meta = await readTags(url);
+    const title = meta.title || stripExt(f);
+    const tn = meta.trackNumber;
+    tracks[i].meta = { title, artist: meta.artist || '', trackNumber: tn };
     const li = document.createElement('li');
-    li.textContent = `${i+1}. ${tracks[i].displayTitle || tracks[i].file}`;
+    li.textContent = `${tn ? tn + '. ' : ''}${title}`; // number once, no .mp3
     li.addEventListener('click', () => load(i, true));
     LIST.appendChild(li);
   }
@@ -65,19 +74,19 @@ async function buildList() {
 async function load(i, autoplay=false) {
   index = i;
   const t = tracks[i];
-  const url = `/downloads/s1-soundtrack/${t.file}`;
-
+  const url = `/downloads/s1-soundtrack/${encodeURIComponent(t.file)}`;
   AUDIO.src = url;
-  const tagMeta = await readTags(url);
 
-  t.meta = {
-    title: tagMeta.title || t.title || t.file,
-    artist: tagMeta.artist || t.artist || '',
-    trackNumber: tagMeta.trackNumber || (t.track || (i+1))
-  };
-  if (i === 0) applyCoverFromTags(tagMeta._tags);
+  // If we don't yet have tags for this one (direct load), read them
+  if (!t.meta) {
+    const meta = await readTags(url);
+    const title = meta.title || stripExt(t.file);
+    t.meta = { title, artist: meta.artist || '', trackNumber: meta.trackNumber || (i+1) };
+  }
+  if (i === 0 && t.meta && t.meta._tags) applyCoverFromTags(t.meta._tags);
   setNowPlaying(t.meta);
 
+  // Highlight list
   [...LIST.children].forEach((li, idx) => li.classList.toggle('active', idx===i));
 
   if (autoplay) AUDIO.play();
@@ -99,6 +108,7 @@ async function init() {
   await load(0, false);
 }
 
+// Controls
 PLAY.addEventListener('click', () => {
   if (AUDIO.paused) AUDIO.play(); else AUDIO.pause();
 });
@@ -114,6 +124,7 @@ PREV.addEventListener('click', () => {
   if (index > 0) load(index-1, true);
 });
 
+// Seek
 AUDIO.addEventListener('timeupdate', () => {
   if (seeking || isNaN(AUDIO.duration)) return;
   SEEK.value = Math.floor((AUDIO.currentTime / AUDIO.duration) * 100) || 0;
