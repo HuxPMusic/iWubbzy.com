@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iWubbzy - Season One (Unofficial Soundtrack)</title>
   <meta name="description" content="Stream the Season One (Unofficial) soundtrack.">
-  <!-- Theme boot (sync with site) -->
+  <!-- Theme boot (sync) -->
   <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();</script>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -23,6 +23,7 @@
       <nav class="nav" aria-label="Primary">
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">Discord</a></li>
           <li><a href="/archive/">Archive</a></li>
         </ul>
       </nav>
@@ -39,9 +40,11 @@
         <div>
           <h1>Season One (Unofficial Soundtrack)</h1>
           <p class="muted">Compiled and ripped by HuxP</p>
-          <p><a class="btn" href="/downloads/wubbzy-season-one-unofficial-soundtrack.zip">Download (ZIP)</a>
-             <a class="btn" href="https://musicbrainz.org/release/26d33c8b-37e3-4a32-87b1-3ee7f82040db" target="_blank" rel="noopener">MusicBrainz</a>
-             <a class="btn" href="https://www.last.fm/music/Wow!+Wow!+Wubbzy!/Wow!+Wow!+Wubbzy!:+Season+One+(Unofficial+Soundtrack)" target="_blank" rel="noopener">Last.fm</a></p>
+          <p class="btnrow">
+            <a class="btn" href="/downloads/wubbzy-season-one-unofficial-soundtrack.zip">Download (ZIP)</a>
+            <a class="btn" href="https://musicbrainz.org/release/26d33c8b-37e3-4a32-87b1-3ee7f82040db" target="_blank" rel="noopener">MusicBrainz</a>
+            <a class="btn" href="https://www.last.fm/music/Wow!+Wow!+Wubbzy!/Wow!+Wow!+Wubbzy!:+Season+One+(Unofficial+Soundtrack)" target="_blank" rel="noopener">Last.fm</a>
+          </p>
         </div>
       </div>
 
@@ -54,7 +57,7 @@
 
       <input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek">
 
-      <ol id="tracklist" class="tracklist"></ol>
+      <ol id="tracklist" class="tracklist" aria-label="Track list / queue"></ol>
 
       <audio id="audio" preload="metadata" crossorigin="anonymous"></audio>
     </section>
@@ -62,7 +65,8 @@
 
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> iWubbzy. Not affiliated with rights holders.</small>
+      <small>© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
+      <br><small>Site owner: <a href="https://huxpmusic.com">HuxP</a></small>
     </div>
   </footer>
 
