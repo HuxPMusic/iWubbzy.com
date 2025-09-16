@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iWubbzy — Season One (Unofficial Soundtrack)</title>
+  <meta name="description" content="Stream the Season One (Unofficial) soundtrack.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="iWubbzy Home">
+        <img src="/assets/img/logo.png" alt="iWubbzy" height="56">
+        <div><span class="brand-title">iWubbzy</span><br><small>unofficial site</small></div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/archive/">Archive</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container main">
+    <section class="card player-card">
+      <div class="player-meta">
+        <img id="cover" alt="Album cover" src="/downloads/wubbzy-season-one-unofficial-soundtrack-cover.png">
+        <div>
+          <h1>Season One (Unofficial Soundtrack)</h1>
+          <p class="muted">Compiled and ripped by HuxP</p>
+          <p><a class="btn" href="/downloads/wubbzy-season-one-unofficial-soundtrack.zip">Download (ZIP)</a>
+             <a class="btn" href="https://musicbrainz.org/release/26d33c8b-37e3-4a32-87b1-3ee7f82040db" target="_blank" rel="noopener">MusicBrainz</a>
+             <a class="btn" href="https://www.last.fm/music/Wow!+Wow!+Wubbzy!/Wow!+Wow!+Wubbzy!:+Season+One+(Unofficial+Soundtrack)" target="_blank" rel="noopener">Last.fm</a></p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev" class="btn" aria-label="Previous track">⏮</button>
+        <button id="play" class="btn" aria-label="Play/Pause">▶</button>
+        <button id="next" class="btn" aria-label="Next track">⏭</button>
+        <span id="now-playing" class="muted">Loading…</span>
+      </div>
+
+      <input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek">
+
+      <ol id="tracklist" class="tracklist"></ol>
+
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> iWubbzy. Not affiliated with rights holders.</small>
+    </div>
+  </footer>
+
+  <script src="./player.js" defer></script>
+</body>
+</html>

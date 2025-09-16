@@ -1,0 +1,9 @@
+/* minimal player styles (inherits site styles) */
+.player-card { padding: 1rem; }
+.player-meta { display:flex; gap:1rem; align-items:center; }
+.player-meta img { width: 140px; height: 140px; object-fit: cover; border-radius: .75rem; }
+.controls { display:flex; gap:.5rem; align-items:center; margin:.75rem 0; }
+#seek { width: 100%; }
+.tracklist { margin: .5rem 0 0; padding-left: 1.25rem; }
+.tracklist li { margin: .25rem 0; cursor: pointer; }
+.tracklist li.active { font-weight: 600; }
