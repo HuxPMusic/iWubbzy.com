@@ -1,76 +1,84 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iWubbzy - Season One (Unofficial Soundtrack)</title>
-  <meta name="description" content="Stream the Season One (Unofficial) soundtrack.">
-  <!-- Theme boot (sync) -->
-  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();</script>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>iWubbzy - Season One (Unofficial Soundtrack)</title>
+<meta content="Stream the Season One (Unofficial) soundtrack." name="description"/>
+<!-- Theme boot (sync) -->
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();</script>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+<link href="./style.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+<link href="/assets/css/iwubbzy-update.css" rel="stylesheet"/>
+
+
+
+
+<link href="/assets/img/favicons/apple-touch-icon.png?v=6" rel="apple-touch-icon"/>
+<link href="/site.webmanifest?v=6" rel="manifest"/>
+
+
+<link href="/favicon.ico?v=6" rel="icon"/>
+<link href="/assets/img/favicons/favicon-16x16.png?v=6" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/img/favicons/favicon-32x32.png?v=6" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicons/favicon-48x48.png?v=6" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/assets/img/favicons/apple-touch-icon.png?v=6" rel="apple-touch-icon"/>
+<link href="/site.webmanifest?v=6" rel="manifest"/>
+<meta content="#0a4a7f" name="theme-color"/>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="iWubbzy Home">
-        <img src="/assets/img/logo.png" alt="iWubbzy" height="56">
-        <div><span class="brand-title">iWubbzy</span><br><small>unofficial site</small></div>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">Discord</a></li>
-          <li><a href="/archive/">Archive</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
-        <span aria-hidden="true">🌓</span> <span data-theme-label>Light</span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main" class="container main">
-    <section class="card player-card">
-      <div class="player-meta">
-        <img id="cover" alt="Album cover" src="/downloads/wubbzy-season-one-unofficial-soundtrack-cover.png">
-        <div>
-          <h1>Season One (Unofficial Soundtrack)</h1>
-          <p class="muted">Compiled and ripped by HuxP</p>
-          <p class="btnrow">
-            <a class="btn" href="/downloads/wubbzy-season-one-unofficial-soundtrack.zip">Download (ZIP)</a>
-            <a class="btn" href="https://musicbrainz.org/release/26d33c8b-37e3-4a32-87b1-3ee7f82040db" target="_blank" rel="noopener">MusicBrainz</a>
-            <a class="btn" href="https://www.last.fm/music/Wow!+Wow!+Wubbzy!/Wow!+Wow!+Wubbzy!:+Season+One+(Unofficial+Soundtrack)" target="_blank" rel="noopener">Last.fm</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="controls">
-        <button id="prev" class="btn" aria-label="Previous track">⏮</button>
-        <button id="play" class="btn" aria-label="Play/Pause">▶</button>
-        <button id="next" class="btn" aria-label="Next track">⏭</button>
-        <span id="now-playing" class="muted">Loading…</span>
-      </div>
-
-      <input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek">
-
-      <ol id="tracklist" class="tracklist" aria-label="Track list / queue"></ol>
-
-      <audio id="audio" preload="metadata" crossorigin="anonymous"></audio>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <small>© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
-      <br><small>Site owner: <a href="https://huxpmusic.com">HuxP</a></small>
-    </div>
-  </footer>
-
-  <script src="/assets/js/main.js" defer></script>
-  <script src="./player.js" defer></script>
-</body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="header">
+<div class="container header-inner">
+<a aria-label="iWubbzy Home" class="brand" href="/">
+<img alt="iWubbzy wordmark" height="56" src="/assets/img/logo.png"/>
+<div><span class="brand-title">iWubbzy</span><br/><small>unofficial site</small></div>
+</a>
+<nav aria-label="Primary" class="nav"><button aria-controls="site-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="True">☰</button>
+<ul id="site-nav">
+<li><a href="/">Home</a></li>
+<li><a href="https://discord.gg/BsuEbysrHB" rel="noopener" target="_blank">Discord</a></li>
+<li><a href="/archive/">Archive</a></li>
+<li><a href="https://discord.gg/BsuEbysrHB" rel="noopener" target="_blank">Discord</a></li></ul>
+</nav>
+<button aria-label="Toggle color theme" aria-pressed="false" class="theme-toggle" data-theme-toggle="">
+<span aria-hidden="true">🌓</span> <span data-theme-label="">Light</span>
+</button>
+</div>
+</header><div style="position:relative;"><img alt="Wubbzy with glasses" id="hero-wubbzy" src="/assets/img/wubbzy-hero.png"/></div>
+<main class="container main" id="main">
+<section class="card player-card">
+<div class="player-meta">
+<img alt="Album cover" id="cover" src="/downloads/wubbzy-season-one-unofficial-soundtrack-cover.png"/>
+<div>
+<h1>Season One (Unofficial Soundtrack)</h1>
+<p class="muted">Compiled and ripped by HuxP</p>
+<p class="btnrow">
+<a class="btn" href="/downloads/wubbzy-season-one-unofficial-soundtrack.zip">Download (ZIP)</a>
+<a class="btn" href="https://musicbrainz.org/release/26d33c8b-37e3-4a32-87b1-3ee7f82040db" rel="noopener" target="_blank">MusicBrainz</a>
+<a class="btn" href="https://www.last.fm/music/Wow!+Wow!+Wubbzy!/Wow!+Wow!+Wubbzy!:+Season+One+(Unofficial+Soundtrack)" rel="noopener" target="_blank">Last.fm</a>
+</p>
+</div>
+</div>
+<div class="controls">
+<button aria-label="Previous track" class="btn" id="prev">⏮</button>
+<button aria-label="Play/Pause" class="btn" id="play">▶</button>
+<button aria-label="Next track" class="btn" id="next">⏭</button>
+<span class="muted" id="now-playing">Loading…</span>
+</div>
+<input aria-label="Seek" id="seek" max="100" min="0" type="range" value="0"/>
+<ol aria-label="Track list / queue" class="tracklist" id="tracklist"></ol>
+<audio crossorigin="anonymous" id="audio" preload="metadata"></audio>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<br/>
+<br/><small>© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small><br/><small>Site owner: <a href="https://huxpmusic.com">HuxP</a>. <span class="credit-epicfridge">New logo &amp; Wubbzy art by Pavlova Cookie / Whopper (@epicfridge on Discord).</span></small></div>
+</footer>
+<script defer="" src="/assets/js/main.js"></script>
+<script defer="" src="./player.js"></script>
+<script defer="True" src="/assets/js/iwubbzy-update.js"></script></body>
 </html>

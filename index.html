@@ -1,89 +1,94 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <title>iWubbzy</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
-  <link rel="apple-touch-icon" href="/assets/img/app-icon-192.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#FFE500">
-  <link rel="stylesheet" href="/assets/css/style.css">
+<title>iWubbzy</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/assets/img/app-icon-192.png" rel="apple-touch-icon"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+<link href="/assets/css/iwubbzy-update.css" rel="stylesheet"/>
 
+
+
+
+<link href="/assets/img/favicons/apple-touch-icon.png?v=6" rel="apple-touch-icon"/>
+<link href="/site.webmanifest?v=6" rel="manifest"/>
+
+
+<link href="/favicon.ico?v=6" rel="icon"/>
+<link href="/assets/img/favicons/favicon-16x16.png?v=6" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/img/favicons/favicon-32x32.png?v=6" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/img/favicons/favicon-48x48.png?v=6" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/assets/img/favicons/apple-touch-icon.png?v=6" rel="apple-touch-icon"/>
+<link href="/site.webmanifest?v=6" rel="manifest"/>
+<meta content="#0a4a7f" name="theme-color"/>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="iWubbzy Home">
-        <img src="/assets/img/logo.png" alt="iWubbzy wordmark" height="56" />
-        <div><span class="brand-title">iWubbzy</span><br><small>unofficial site</small></div>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">Discord</a></li>
-          <li><a href="/archive/">Archive</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
-        <span aria-hidden="true">🌓</span> <span data-theme-label>Light</span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main" class="container main">
-    <div class="two-col">
-      <section class="content">
-        <article class="card post">
-          <div class="date-badge"><span class="day">30</span><span class="mon">Aug</span></div>
-          <h1>Welcome to iWubbzy!</h1>
-          <p class="byline"><time datetime="2025-08-30">30 August 2025</time></p>
-          <p>This is a placeholder article. Real posts will go here later.</p>
-        </article>
-      </section>
-      <aside class="sidebar">
-        <div class="widget">
-          <a href="https://wubbzy.fandom.com/wiki/Wubbzypedia" target="_blank" rel="noopener">
-            <img src="/assets/img/in-every-episode.jpg" alt="In Every Episode" style="width:100%;height:auto;border-radius:.5rem;margin-top:.5rem">
-          </a>
-        </div>
-        <div class="widget">
-          <strong>Search</strong><br>
-          <input type="search" placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem">
-        </div>
-        <div class="widget follow-box">
-          <strong>Follow</strong>
-          <div class="follow-item">
-            <div><strong>YouTube</strong></div>
-            <div class="g-ytsubscribe" data-channelid="UCjgGQNn6dPbnuLTvuRLTu5Q" data-layout="default" data-count="default"></div>
-          </div>
-          <div class="follow-item">
-            <div><strong>Twitter</strong></div>
-            <a href="https://twitter.com/HuxPMusic" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @HuxPMusic</a>
-          </div>
-          <div class="follow-item">
-            <div><strong>Instagram</strong></div>
-            <a class="btn-ig" href="https://instagram.com/HuxPMusic" target="_blank" rel="noopener">Follow on Instagram</a>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </main>
-  <script async src="https://apis.google.com/js/platform.js"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  
-  <footer class="footer">
-    <div class="container">
-      <small>© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small>
-      <br><small>Site owner: <a href="https://huxpmusic.com">HuxP</a></small>
-    </div>
-  </footer>
-  <script src="/assets/js/main.js" defer></script>
-
-</body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="header">
+<div class="container header-inner">
+<a aria-label="iWubbzy Home" class="brand" href="/">
+<img alt="iWubbzy wordmark" height="56" src="/assets/img/logo.png"/>
+<div><span class="brand-title">iWubbzy</span><br/><small>unofficial site</small></div>
+</a>
+<nav aria-label="Primary" class="nav"><button aria-controls="site-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="True">☰</button>
+<ul id="site-nav">
+<li><a href="/">Home</a></li>
+<li><a href="https://discord.gg/BsuEbysrHB" rel="noopener" target="_blank">Discord</a></li>
+<li><a href="/archive/">Archive</a></li>
+<li><a href="https://discord.gg/BsuEbysrHB" rel="noopener" target="_blank">Discord</a></li></ul>
+</nav>
+<button aria-label="Toggle color theme" aria-pressed="false" class="theme-toggle" data-theme-toggle="">
+<span aria-hidden="true">🌓</span> <span data-theme-label="">Light</span>
+</button>
+</div>
+</header><div style="position:relative;"><img alt="Wubbzy with glasses" id="hero-wubbzy" src="/assets/img/wubbzy-hero.png"/></div>
+<main class="container main" id="main">
+<div class="two-col">
+<section class="content">
+<article class="card post">
+<div class="date-badge"><span class="day">30</span><span class="mon">Aug</span></div>
+<h1>Welcome to iWubbzy!</h1>
+<p class="byline"><time datetime="2025-08-30">30 August 2025</time></p>
+<p>This is a placeholder article. Real posts will go here later.</p>
+</article>
+</section>
+<aside class="sidebar">
+<div class="widget">
+<a href="https://wubbzy.fandom.com/wiki/Wubbzypedia" rel="noopener" target="_blank">
+<img alt="In Every Episode" src="/assets/img/in-every-episode.jpg" style="width:100%;height:auto;border-radius:.5rem;margin-top:.5rem"/>
+</a>
+</div>
+<div class="widget">
+<strong>Search</strong><br/>
+<input placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem" type="search"/>
+</div>
+<div class="widget follow-box">
+<strong>Follow</strong>
+<div class="follow-item">
+<div><strong>YouTube</strong></div>
+<div class="g-ytsubscribe" data-channelid="UCjgGQNn6dPbnuLTvuRLTu5Q" data-count="default" data-layout="default"></div>
+</div>
+<div class="follow-item">
+<div><strong>Twitter</strong></div>
+<a class="twitter-follow-button" data-show-count="false" data-size="large" href="https://twitter.com/HuxPMusic">Follow @HuxPMusic</a>
+</div>
+<div class="follow-item">
+<div><strong>Instagram</strong></div>
+<a class="btn-ig" href="https://instagram.com/HuxPMusic" rel="noopener" target="_blank">Follow on Instagram</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<script async="" src="https://apis.google.com/js/platform.js"></script>
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+<footer class="footer">
+<div class="container">
+<br/>
+<br/><small>© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource. Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.</small><br/><small>Site owner: <a href="https://huxpmusic.com">HuxP</a>. <span class="credit-epicfridge">New logo &amp; Wubbzy art by Pavlova Cookie / Whopper (@epicfridge on Discord).</span></small></div>
+</footer>
+<script defer="" src="/assets/js/main.js"></script>
+<script defer="True" src="/assets/js/iwubbzy-update.js"></script></body>
 </html>
