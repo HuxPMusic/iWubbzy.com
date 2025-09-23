@@ -41,3 +41,29 @@ body[data-theme="dark"],
 
 /* hide subtitle */
 .header .brand .brand-title, .header .brand small { display:none !important; }
+
+/* Theme-aware footer */
+.footer{
+  background: var(--panel, rgba(0,0,0,.04));
+  border-top: 1px solid var(--border, rgba(0,0,0,.12));
+  color: var(--text, #111);
+  margin-top: 2rem;
+}
+.footer .footer-inner{ padding: 1rem; }
+
+.footer a{
+  color: var(--link, #0b5fff);
+  text-decoration: underline;
+}
+
+.footer .legal,
+.footer .credits{
+  margin: .25rem 0;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+/* Make the credit a touch muted, but still readable on dark */
+.footer .credits{
+  color: var(--muted, #6b7280);
+}
