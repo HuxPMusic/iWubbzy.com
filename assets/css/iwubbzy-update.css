@@ -1,18 +1,47 @@
 
-/* Bottom-left hero */
+
+/* --- Wallpapers (light/dark) --- */
+:root{
+  --iw-wallpaper-light: url('/assets/img/outside.png');
+  --iw-wallpaper-dark:  url('/assets/img/underwater.png');
+  --iw-wallpaper-size: cover;
+}
+body{
+  background-image: var(--iw-wallpaper-light);
+  background-size: var(--iw-wallpaper-size);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+}
+html[data-theme="dark"] body,
+body[data-theme="dark"],
+.theme-dark body{
+  background-image: var(--iw-wallpaper-dark);
+}
+@media (prefers-color-scheme: dark){
+  html:not([data-theme="light"]) body{
+    background-image: var(--iw-wallpaper-dark);
+  }
+}
+
+
+
+/* --- Bottom hero wrap (clipped) --- */
+.hero-wrap{ position:relative; height:180px; overflow:hidden; }
 #hero-wubbzy{
   position:absolute;
   left:1rem;
-  bottom:-10px;
+  bottom:-14px;
   right:auto;
-  width:min(36vw,380px);
+  width:min(28vw,280px);
   pointer-events:none;
-  filter:drop-shadow(0 6px 14px rgba(0,0,0,.25));
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.25));
   z-index:2;
 }
 @media (max-width:700px){
-  #hero-wubbzy{ width:min(55vw,320px); left:.5rem; bottom:-6px; right:auto; }
+  .hero-wrap{ height:140px; }
+  #hero-wubbzy{ width:min(50vw,260px); left:.5rem; bottom:-10px; }
 }
 
-/* Hide brand subtitle */
-.header .brand .brand-title, .header .brand small{display:none!important}
+
+.header .brand .brand-title, .header .brand small { display:none !important; }
