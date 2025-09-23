@@ -41,3 +41,16 @@ body[data-theme="dark"],
 
 /* hide subtitle */
 .header .brand .brand-title, .header .brand small { display:none !important; }
+
+/* hide brand title generically (keep any <small> subtitle) */
+.header .brand .brand-title,
+.header .brand .site-title,
+.header .brand h1,
+.header .brand h2,
+.header .brand .title { display:none !important; }
+
+/* footer unify */
+footer, .site-footer{ color:#000 !important; }
+footer a, .site-footer a{ color:#000 !important; text-decoration:underline; }
+footer .footer-inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem; }
+footer .credits{ margin:0; }
