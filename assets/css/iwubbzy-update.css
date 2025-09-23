@@ -3,9 +3,6 @@
   --iw-wallpaper-light: url('/assets/img/outside.png');
   --iw-wallpaper-dark:  url('/assets/img/underwater.png');
   --iw-wallpaper-size: cover;
-  --hero-w: min(22vw, 210px);
-  --hero-bottom: -8px;
-  --hero-clip-h: 140px;
 }
 body{
   background-image: var(--iw-wallpaper-light);
@@ -16,34 +13,34 @@ body{
 }
 html[data-theme="dark"] body,
 body[data-theme="dark"],
-.theme-dark body,
-html.dark body,
-body.dark{
+.theme-dark body{
   background-image: var(--iw-wallpaper-dark);
 }
 @media (prefers-color-scheme: dark){
-  html:not([data-theme="light"]):not(.light) body{
+  html:not([data-theme="light"]) body{
     background-image: var(--iw-wallpaper-dark);
   }
 }
 
-.hero-wrap{ position:relative; height:var(--hero-clip-h); overflow:hidden; }
+/* bottom hero wrapper (cropped) */
+.hero-wrap{ position:relative; height:180px; overflow:hidden; }
 #hero-wubbzy{
   position:absolute;
   left:1rem;
-  bottom:var(--hero-bottom);
-  width:var(--hero-w);
+  bottom:-14px;
+  right:auto;
+  width:min(28vw, 280px);
   pointer-events:none;
   filter: drop-shadow(0 6px 14px rgba(0,0,0,.25));
   z-index:2;
 }
-@media (max-width:700px){
-  :root{
-    --hero-w: min(50vw, 200px);
-    --hero-clip-h: 120px;
-    --hero-bottom: -6px;
-  }
+@media (max-width: 700px){
+  .hero-wrap{ height:140px; }
+  #hero-wubbzy{ width:min(50vw, 260px); left:.5rem; bottom:-10px; }
 }
+
+/* hide subtitle */
+.header .brand .brand-title, .header .brand small { display:none !important; }
 
 /* Theme-aware footer */
 .footer{
@@ -53,8 +50,20 @@ body.dark{
   margin-top: 2rem;
 }
 .footer .footer-inner{ padding: 1rem; }
-.footer a{ color: var(--link, #0b5fff); text-decoration: underline; }
-.footer .legal, .footer .credits{ margin:.25rem 0; font-size:.875rem; line-height:1.5; }
-.footer .credits{ color: var(--muted, #6b7280); }
 
-.header .brand .brand-title{ display:none !important; }
+.footer a{
+  color: var(--link, #0b5fff);
+  text-decoration: underline;
+}
+
+.footer .legal,
+.footer .credits{
+  margin: .25rem 0;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+/* Make the credit a touch muted, but still readable on dark */
+.footer .credits{
+  color: var(--muted, #6b7280);
+}
