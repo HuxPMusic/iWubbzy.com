@@ -1,45 +1,18 @@
 
-/* Global iWubbzy update */
-:root{
-  --bg-light:url('/assets/img/outside.png');
-  --bg-dark:url('/assets/img/underwater.png');
-  --bg-dark-overlay: rgba(0,0,0,.15);
+/* Bottom-left hero */
+#hero-wubbzy{
+  position:absolute;
+  left:1rem;
+  bottom:-10px;
+  right:auto;
+  width:min(36vw,380px);
+  pointer-events:none;
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.25));
+  z-index:2;
 }
-html, body { min-height:100%; }
-body{
-  background-image: var(--bg-light);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-html[data-theme="dark"] body{
-  background-image: linear-gradient(var(--bg-dark-overlay), var(--bg-dark-overlay)), var(--bg-dark);
-}
-.header .brand img{ height:56px; width:auto; display:block; }
-
-/* Mobile nav */
-.nav-toggle{ display:none; background:transparent; border:0; font-size:1.5rem; line-height:1; padding:.5rem; border-radius:.75rem; }
-@media (max-width: 820px){
-  .nav ul{ display:none; position:absolute; right:1rem; top:64px; background:rgba(255,255,255,.95); border-radius:.75rem; padding:.5rem 1rem; box-shadow:0 8px 24px rgba(0,0,0,.15); z-index:1000; }
-  html[data-theme="dark"] .nav ul{ background:rgba(16,24,32,.95); }
-  .nav ul.open{ display:block; }
-  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+@media (max-width:700px){
+  #hero-wubbzy{ width:min(55vw,320px); left:.5rem; bottom:-6px; right:auto; }
 }
 
-/* Homepage hero */
-#hero-wubbzy{position:absolute; left:1rem; bottom:-10px; right:auto; width:min(36vw,380px); pointer-events:none; filter: drop-shadow(0 6px 14px rgba(0,0,0,.25)); z-index:2;}
-@media (max-width: 700px){#hero-wubbzy{position:absolute; left:1rem; bottom:-10px; right:auto; width:min(36vw,380px); pointer-events:none; filter: drop-shadow(0 6px 14px rgba(0,0,0,.25)); z-index:2;}}
-
-/* Sidebar card */
-.sidebar-card{ background:rgba(255,255,255,.75); border-radius:.75rem; padding:1rem; margin:1rem 0; }
-html[data-theme="dark"] .sidebar-card{ background:rgba(24,28,36,.75); }
-.sidebar-card h3{ margin:0 0 .5rem; }
-.sidebar-card img{ width:100%; height:auto; border-radius:.5rem; display:block; }
-
-/* Footer credit */
-.footer small .credit-epicfridge{ display:inline-block; margin-top:.25rem; }
-
-/* Hide header brand text/subtitle globally */
-.header .brand .brand-title, .header .brand small { display:none !important; }
-
-@media (max-width: 700px){#hero-wubbzy{width:min(55vw,320px); left:.5rem; bottom:-6px; right:auto;}}
+/* Hide brand subtitle */
+.header .brand .brand-title, .header .brand small{display:none!important}
