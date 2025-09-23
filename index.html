@@ -12,8 +12,17 @@
 <link href="/assets/img/app-icon-192.png" rel="apple-touch-icon"/>
 <link href="/site.webmanifest" rel="manifest"/>
 <meta content="#FFE500" name="theme-color"/>
-<link href="/assets/css/style.css" rel="stylesheet"/>
-<link href="/assets/css/iwubbzy-update.css" rel="stylesheet"/></head>
+<script>
+  (function(){
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch(e){}
+  })();
+</script><link href="/assets/css/style.css" rel="stylesheet"/>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="header">
@@ -41,10 +50,13 @@
 </article>
 </section>
 <aside class="sidebar">
+
 <div class="widget">
-<img alt="Art by Malka (@@princess_malka)" src="/assets/img/fanart/malka-iwubbzy.png" style="width:100%;height:auto;border-radius:.5rem;margin-top:.5rem"/>
-</a>
+<strong>Fanart Spotlight</strong><br/>
+<img alt="Fanart by Malka (@princess_malka on Discord)" src="/assets/img/fanart/malka-iwubbzy.png" style="width:100%;height:auto;border-radius:.5rem;margin-top:.5rem"/>
+<small class="muted">Art by Malka (@princess_malka on Discord)</small>
 </div>
+
 <div class="widget">
 <strong>Search</strong><br/>
 <input placeholder="Search (coming soon)" style="width:100%;padding:.6rem;border:1px solid var(--border);border-radius:.5rem" type="search"/>
@@ -70,15 +82,13 @@
 <script async="" src="https://apis.google.com/js/platform.js"></script>
 <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 <div class="hero-wrap"><img alt="Wubbzy with glasses" id="hero-wubbzy" src="/assets/img/wubbzy-hero.png"/></div><footer class="footer">
-  <div class="container footer-inner">
-    <p class="legal">
-      © <span id="year"></span> iWubbzy, an unofficial, non-commercial fan resource.
+<div class="container footer-inner">
+<p class="legal">© <span id="year"></span> iWubbzy, an unofficial, non commercial fan resource.
       Not affiliated with Bob Boyle, Bolder Media, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.
-      <br>Site owner: <a href="https://huxpmusic.com">HuxP</a>
-    </p>
-    <p class="credits">
-      Artwork credits: Pavlova Cookie / Whopper (@epicfridge) for Wubbzy art and logo;
-      Malka (@princess_malka) for featured fanart.
-    </p>
-  </div>
+      <br/>Site owner: <a href="https://huxpmusic.com">HuxP</a></p>
+<p class="credits">Artwork credits: Pavlova Cookie / Whopper (@epicfridge) for Wubbzy art and logo; Malka (@princess_malka) for featured fanart.</p>
+</div>
 </footer>
+<script defer="" src="/assets/js/main.js"></script>
+</body>
+</html>
