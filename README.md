@@ -1,7 +1,5 @@
 # iWubbzy.com
-
-Unofficial, non commercial fan resource for **Wow! Wow! Wubbzy!**  
-Live site: https://iwubbzy.com  
+ 
 Community chat: https://discord.gg/BsuEbysrHB
 
 ## Credits and disclaimer
