@@ -9,16 +9,16 @@ body{
   font-size: 13px;
   line-height: 1.4;
   color: #000;
-  background-color: #9bdcff;
+  background-color: #bfefff;
   background-image: url('/assets/img/outside.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
 }
 
-a:link{ color:#0000ee; }
+a:link{ color:#0060a0; }
 a:visited{ color:#551a8b; }
-a:hover{ color:#ff0000; }
+a:hover{ color:#ff8a00; }
 a{ text-decoration: underline; }
 
 #page{
@@ -29,7 +29,7 @@ a{ text-decoration: underline; }
 }
 
 #topbar{
-  background: #0a4a7f;
+  background: #0060a0;
   color: #ffffff;
   padding: 8px 10px;
 }
@@ -69,7 +69,7 @@ a{ text-decoration: underline; }
 #sidebar{
   width: 230px;
   vertical-align: top;
-  background: #eef8ff;
+  background: #dff6ff;
   border-right: 2px solid #000;
   padding: 8px;
 }
@@ -81,7 +81,7 @@ a{ text-decoration: underline; }
 
 .hero{
   border: 2px solid #000;
-  background: #dff6ff;
+  background: #d0e0f0;
   margin-bottom: 10px;
 }
 
@@ -98,7 +98,7 @@ a{ text-decoration: underline; }
 }
 
 .box-title{
-  background: #0a4a7f;
+  background: #0060a0;
   color: #ffffff;
   font-weight: bold;
   padding: 4px 6px;
