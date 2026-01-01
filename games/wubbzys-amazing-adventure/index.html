@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>iWubbzy</title>
+  <title>iWubbzy - Wubbzy&#x27;s Amazing Adventure</title>
   <meta name="description" content="Unofficial Wow! Wow! Wubbzy! fan archive site."/>
 
   <link rel="icon" href="/favicon.ico"/>
@@ -16,6 +16,12 @@
   <link rel="stylesheet" href="/assets/css/style.css"/>
   <link rel="stylesheet" href="/assets/css/iwubbzy-classic.css"/>
   
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = { autoplay: "on", scale: "noBorder", letterbox: "off" };
+</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
 </head>
 
 <body>
@@ -40,13 +46,13 @@
       </div>
 
       <nav class="topnav" aria-label="Site navigation">
-        <a href="/" class="active">Home</a>
+        <a href="/">Home</a>
         <span class="sep">|</span>
         <a href="/apps/">Apps</a>
         <span class="sep">|</span>
         <a href="/activities/">Activities</a>
         <span class="sep">|</span>
-        <a href="/games/">Games</a>
+        <a href="/games/" class="active">Games</a>
         <span class="sep">|</span>
         <a href="/wubbzy-says/">Wubbzy Says</a>
         <span class="sep">|</span>
@@ -60,82 +66,18 @@
 
     <main class="page">
       
-<div class="hero">
-  <img src="/assets/img/wubbzy-hero.png" alt="Wubbzy"/>
-  <div class="hero-text">
-    <h1 class="h1">Welcome to iWubbzy</h1>
-    <p class="lede">
-      iWubbzy is a fan-made hub for preserved <b>Wow! Wow! Wubbzy!</b> downloads, page captures, and community links.
-      This site is still being expanded.
-    </p>
-    <div class="note small">
-      <b>Tip:</b> Check the <a href="/archive/">Archive</a> for wallpapers, e-cards, and other saved files.
-    </div>
-  </div>
+<h1 class="h1">Wubbzy's Amazing Adventure</h1>
+<p class="lede">
+  This page hosts the game in-browser. Place these files in this same folder:
+  <b>wplatform_main.swf</b>, <b>wplatform_levels.swf</b>, <b>wplatform_sounds.swf</b>.
+</p>
+
+<div class="game-frame">
+  <div id="player"></div>
 </div>
 
-<hr class="hr"/>
-
-<div class="grid">
-  <div class="card">
-    <div class="card-h">Site Links</div>
-    <div class="card-b">
-      <ul class="list-clean">
-        <li><a href="/archive/"><b>Archive</b></a></li>
-        <li><a href="/downloads/"><b>Downloads folder</b></a> (direct files)</li>
-        <li><a href="/games/"><b>Games</b></a></li>
-      </ul>
-      <hr class="hr"/>
-      <div class="small">
-        <b>Helpful websites:</b>
-        <ul class="list-clean">
-          <li><a href="https://wubbzy.fandom.com/wiki/Wubbzypedia" target="_blank" rel="noopener">Wubbzypedia</a></li>
-          <li><a href="https://wubbzysongs.com/" target="_blank" rel="noopener">Wubbzysongs.com</a></li>
-          <li><a href="https://wubbworld.xyz/" target="_blank" rel="noopener">Wubbworld.xyz</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-h">News</div>
-    <div class="card-b">
-      <p class="small" style="margin-top:0;">No blog posts yet.</p>
-      <div class="note small">
-        When updates happen, they will be posted here and on Discord.
-      </div>
-      <hr class="hr"/>
-      <div class="small">
-        <b>Discord invite:</b><br/>
-        <a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">discord.gg/BsuEbysrHB</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-h">Featured Game</div>
-    <div class="card-b">
-      <p style="margin-top:0;">
-        <b>Wubbzy's Amazing Adventure</b> is available as a browser-playable page using an HTML5 Flash emulator.
-      </p>
-      <ul class="list-clean">
-        <li><a href="/games/wubbzys-amazing-adventure/"><b>Play the game</b></a></li>
-      </ul>
-      <p class="small" style="margin:0;">
-        You will need the three SWF files placed in that folder for it to run.
-      </p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-h">Follow</div>
-    <div class="card-b">
-      <ul class="list-clean">
-        <li><a href="https://twitter.com/HuxPMusic" target="_blank" rel="noopener">@HuxPMusic (Twitter)</a></li>
-        <li><a href="https://instagram.com/HuxPMusic" target="_blank" rel="noopener">@HuxPMusic (Instagram)</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="note small" style="margin-top:12px;">
+  If you see a blank box, open DevTools and check for 404 errors. The three SWF files must be named exactly.
 </div>
 
     </main>
@@ -143,13 +85,13 @@
     <footer class="footer">
       
 <div class="footer-topnav">
-  <a href="/" class="active">Home</a>
+  <a href="/">Home</a>
         <span class="sep">|</span>
         <a href="/apps/">Apps</a>
         <span class="sep">|</span>
         <a href="/activities/">Activities</a>
         <span class="sep">|</span>
-        <a href="/games/">Games</a>
+        <a href="/games/" class="active">Games</a>
         <span class="sep">|</span>
         <a href="/wubbzy-says/">Wubbzy Says</a>
         <span class="sep">|</span>
@@ -194,5 +136,13 @@
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/iwubbzy-update.js"></script>
   
+<script>
+  const ruffle = window.RufflePlayer.newest();
+  const player = ruffle.createPlayer();
+  player.tabIndex = 0;
+  document.getElementById("player").appendChild(player);
+  player.load("wplatform_main.swf");
+</script>
+
 </body>
 </html>
