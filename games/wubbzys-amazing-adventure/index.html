@@ -62,8 +62,8 @@
       
 <h1 class="h1">Wubbzy's Amazing Adventure</h1>
 <p class="lede">
-  This page hosts the game in-browser. Place these files in this same folder:
-  <b>wplatform_main.swf</b>, <b>wplatform_levels.swf</b>, <b>wplatform_sounds.swf</b>.
+  This game is streamed from Archive.org (item: <b>iWubbzy</b>) using Ruffle.
+  If it fails to load, check your network/console for blocked requests.
 </p>
 
 <div class="game-frame">
@@ -71,7 +71,8 @@
 </div>
 
 <div class="note small" style="margin-top:12px;">
-  If you see a blank box, open DevTools and check for 404 errors. The three SWF files must be named exactly.
+  Files are served from https://archive.org/download/iWubbzy/games/wubbzys-amazing-adventure/.
+  If you see a blank box, open DevTools and look for blocked requests.
 </div>
 
     </main>
@@ -135,7 +136,7 @@
   const player = ruffle.createPlayer();
   player.tabIndex = 0;
   document.getElementById("player").appendChild(player);
-  player.load("wplatform_main.swf");
+  player.load("https://archive.org/download/iWubbzy/games/wubbzys-amazing-adventure/wplatform_main.swf");
 </script>
 
 </body>
