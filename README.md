@@ -1,6 +1,6 @@
 # iWubbzy.com
  
-Community chat: https://discord.gg/BsuEbysrHB
+Community chat: https://discord.gg/hKXwdhUQzr
 
 ## Credits and disclaimer
 
