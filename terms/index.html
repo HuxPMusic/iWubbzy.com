@@ -20,33 +20,7 @@
 
 <body>
   <div class="site">
-    <header class="masthead">
-      <div class="brandbar">
-        <a class="brand" href="/">
-          <img src="/assets/img/logo.png" alt="iWubbzy"/>
-          <div>
-            <div style="font-weight:bold; font-size:14px;">iWubbzy</div>
-            <div class="tagline">Unofficial, non commercial fan resource for <b>Wow! Wow! Wubbzy!</b></div>
-          </div>
-        </a>
-
-        <div class="socials" aria-label="Social links">
-          <a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">
-            <img src="/assets/img/discord.svg" alt="Discord"/> discord.gg/BsuEbysrHB
-          </a>
-</div>
-      </div>
-
-      <nav class="topnav" aria-label="Site navigation">
-        <a href="/">Home</a>
-        <span class="sep">|</span>
-        <a href="/archive/">Archive</a>
-        <span class="sep">|</span>
-        <a href="/about/">About Us</a>
-        <span class="sep">|</span>
-        <a href="/contact/">Contact Us</a>
-      </nav>
-    </header>
+    <header class="masthead" data-include="header"></header>
 
     <main class="page">
       
@@ -66,49 +40,10 @@
 
     </main>
 
-    <footer class="footer">
-      
-<div class="footer-topnav">
-  <a href="/">Home</a>
-  <span class="sep">|</span>
-  <a href="/archive/">Archive</a>
-  <span class="sep">|</span>
-  <a href="/about/">About Us</a>
-  <span class="sep">|</span>
-  <a href="/contact/">Contact Us</a>
-</div>
-<div class="footer-cols">
-  <div class="footer-col">
-    <h3>Copyright &amp; Privacy</h3>
-    <div><a href="/privacy/">Privacy Policy</a></div>
-    <div><a href="/terms/">Terms of Service</a></div>
-    <div><a href="/copyright/">Copyright Notices</a></div>
-  </div>
-  <div class="footer-col">
-    <h3>Customer Support</h3>
-    <div><a href="/support/">Support</a></div>
-    <div><a href="/support/#app-help">App Help</a></div>
-    <div><a href="/support/#feedback">Feedback</a></div>
-  </div>
-  <div class="footer-col">
-    <h3>Social</h3>
-    <div><a href="https://discord.gg/BsuEbysrHB" target="_blank" rel="noopener">Discord</a></div>
-    <div><a href="https://instagram.com/HuxPMusic" target="_blank" rel="noopener">Instagram</a></div>
-    <div><a href="https://twitter.com/HuxPMusic" target="_blank" rel="noopener">Twitter</a></div>
-  </div>
-</div>
-
-<div class="footer-meta">
-  <div>iWubbzy is a fan-made archive site. Wow! Wow! Wubbzy! is owned by its respective rights holders.</div>
-  <div style="margin-top:6px;">
-    <a href="https://huxpmusic.com/">© 2026 HuxP</a><br/>
-    Not affiliated with Bob Boyle, Bolder Media, Cupcake Digital, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.
-  </div>
-</div>
-
-    </footer>
+    <footer class="footer" data-include="footer"></footer>
   </div>
 
+  <script src="/assets/js/shared-layout.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/iwubbzy-update.js"></script>
   
