@@ -78,27 +78,18 @@ footer .credits{margin:0}
   color: #0b0b0b;
   line-height: 1.45;
 }
-
 .wb-announce-icon {
   font-size: 16px;
   flex-shrink: 0;
   line-height: 1;
 }
-
-.wb-announce-text {
-  flex: 1;
-}
-
+.wb-announce-text { flex: 1; }
 .wb-announce a {
   color: #075b89;
   font-weight: bold;
   text-decoration: none;
 }
-
-.wb-announce a:hover {
-  text-decoration: underline;
-}
-
+.wb-announce a:hover { text-decoration: underline; }
 @media (max-width: 760px) {
   .wb-announce { font-size: 12px; padding: 6px 10px; gap: 7px; }
 }

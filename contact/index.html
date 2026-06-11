@@ -20,7 +20,38 @@
 
 <body>
   <div class="site">
-    <header class="masthead" data-include="header"></header>
+    <header class="masthead">
+  <div class="brandbar">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo.png" alt="iWubbzy"/>
+      <div>
+        <div style="font-weight:bold; font-size:14px;">iWubbzy</div>
+        <div class="tagline">Unofficial, non commercial fan resource for <b>Wow! Wow! Wubbzy!</b></div>
+      </div>
+    </a>
+    <div class="socials" aria-label="Social links">
+      <a href="https://discord.gg/hKXwdhUQzr" target="_blank" rel="noopener">
+        <img src="/assets/img/discord.svg" alt="Discord"/> discord.gg/hKXwdhUQzr
+      </a>
+    </div>
+  </div>
+  <nav class="topnav" aria-label="Site navigation" id="topnav">
+    <a href="/">Home</a>
+    <span class="sep">|</span>
+    <a href="/archive/">Archive</a>
+    <span class="sep">|</span>
+    <a href="/about/">About Us</a>
+    <span class="sep">|</span>
+    <a href="/contact/">Contact Us</a>
+  </nav>
+  <div class="wb-announce" role="note" aria-label="WubbBoard announcement">
+    <span class="wb-announce-icon" aria-hidden="true">&#128444;</span>
+    <span class="wb-announce-text">
+      <strong>New:</strong> <a href="https://wubbboard.com" target="_blank" rel="noopener">WubbBoard</a>
+      is a community image board for <em>Wow! Wow! Wubbzy!</em> fan art and official artwork &mdash; come upload and browse!
+    </span>
+  </div>
+</header>
 
     <main class="page">
       
@@ -49,12 +80,63 @@
 
     </main>
 
-    <footer class="footer" data-include="footer"></footer>
+    <footer class="footer">
+  <div class="footer-topnav">
+    <a href="/">Home</a>
+    <span class="sep">|</span>
+    <a href="/archive/">Archive</a>
+    <span class="sep">|</span>
+    <a href="/about/">About Us</a>
+    <span class="sep">|</span>
+    <a href="/contact/">Contact Us</a>
+  </div>
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h3>Copyright &amp; Privacy</h3>
+      <div><a href="/privacy/">Privacy Policy</a></div>
+      <div><a href="/terms/">Terms of Service</a></div>
+      <div><a href="/copyright/">Copyright Notices</a></div>
+    </div>
+    <div class="footer-col">
+      <h3>Customer Support</h3>
+      <div><a href="/support/">Support</a></div>
+      <div><a href="/support/#app-help">App Help</a></div>
+      <div><a href="/support/#feedback">Feedback</a></div>
+    </div>
+    <div class="footer-col">
+      <h3>Social</h3>
+      <div><a href="https://discord.gg/hKXwdhUQzr" target="_blank" rel="noopener">Discord</a></div>
+      <div><a href="https://instagram.com/HuxPMusic" target="_blank" rel="noopener">Instagram</a></div>
+      <div><a href="https://twitter.com/HuxPMusic" target="_blank" rel="noopener">Twitter</a></div>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <div>iWubbzy is a fan-made archive site. <i>Wow! Wow! Wubbzy!</i> is owned by its respective rights holders.</div>
+    <div style="margin-top:6px;">
+      <a href="https://huxpmusic.com/">&copy; 2026 HuxP</a><br/>
+      Not affiliated with Bob Boyle, Bolder Media, Cupcake Digital, Starz Media, Nick Jr., Noggin, Viacom or any rights holders.
+    </div>
+  </div>
+</footer>
   </div>
 
-  <script src="/assets/js/shared-layout.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/iwubbzy-update.js"></script>
   
+<script>
+(function(){
+  var raw = window.location.pathname;
+  var path = raw.replace(/\/index\.html$/, '/');
+  if (!path.endsWith('/') && !path.includes('.')) path += '/';
+  if (path === '') path = '/';
+  document.querySelectorAll('#topnav a[href]').forEach(function(a){
+    var href = a.getAttribute('href');
+    if (href === path || (href !== '/' && path.startsWith(href))) {
+      a.style.textDecoration = 'underline';
+      a.style.opacity = '0.85';
+    }
+  });
+})();
+</script>
 </body>
 </html>
