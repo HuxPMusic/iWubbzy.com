@@ -63,3 +63,42 @@ footer, .site-footer{color:#000 !important}
 footer a, .site-footer a{color:#000 !important;text-decoration:underline}
 footer .credits{margin:0}
 @media (max-width:700px){footer, .site-footer, footer .footer-inner, .site-footer .footer-inner{justify-content:center;gap:.5rem}}
+
+/* ── WubbBoard announcement banner ────────────────── */
+.wb-announce {
+  background: #deeef8;
+  border-top: 1px solid rgba(0,0,0,.08);
+  border-bottom: 2px solid #0b86c2;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #0b0b0b;
+  line-height: 1.45;
+}
+
+.wb-announce-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.wb-announce-text {
+  flex: 1;
+}
+
+.wb-announce a {
+  color: #075b89;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wb-announce a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .wb-announce { font-size: 12px; padding: 6px 10px; gap: 7px; }
+}
