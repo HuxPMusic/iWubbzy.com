@@ -66,16 +66,16 @@ footer .credits{margin:0}
 
 /* ── WubbBoard announcement banner ────────────────── */
 .wb-announce {
-  background: #deeef8;
-  border-top: 1px solid rgba(0,0,0,.08);
-  border-bottom: 2px solid #0b86c2;
+  background: #fef3c7;
+  border-top: 2px solid #f59e0b;
+  border-bottom: 3px solid #d97706;
   padding: 7px 12px;
   font-size: 12.5px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #0b0b0b;
+  color: #1c1917;
   line-height: 1.45;
 }
 .wb-announce-icon {
@@ -85,7 +85,7 @@ footer .credits{margin:0}
 }
 .wb-announce-text { flex: 1; }
 .wb-announce a {
-  color: #075b89;
+  color: #92400e;
   font-weight: bold;
   text-decoration: none;
 }
